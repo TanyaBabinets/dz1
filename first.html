@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=БЮ, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h1>Приветствуем вас!</h1>
+
+    <h1>Профиль клиента</h1>
+    <script>
+
+        do {
+            let userFio = prompt("Введите ФИО:");
+            let userGender = prompt("Введите ваш пол:");
+            let userAge = prompt("Введите ваш возраст:");
+            let userEmail = prompt("Введите ваш e-mail:");
+            let info = `ФИО: ${userFio}\nПол: ${userGender}\nВозраст: ${userAge}\nE-mail: ${userEmail}\n\nВсе верно?`;
+            let confirmation = confirm(info);
+            if (confirmation) {
+                alert("Спасибо за предоставленную информацию!");
+                break;
+            }
+        }
+        while (true);
+
+    </script>
+
+</body>
+
+</html>

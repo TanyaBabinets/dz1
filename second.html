@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Пользователь вводит номер трамвайного билета (шестизначное число). 
+    Определить, является ли билет счастливым (в этом
+    случае сумма первых трёх цифр должна быть равна сумме последних трёх цифр). -->
+</head>
+
+<body>
+    <h1>Приветствуем вас!</h1>
+
+    <h1>Хотите проверить свой билет?</h1>
+    <script>
+        let number = prompt("Введите 6-тизначное число");
+        if (number > 99999 || number < 1000000) {
+            let first3 = parseInt(number.substring(0, 3));
+            let second3 = parseInt(number.substring(3));
+            let sumFirst3 = first3 % 10 + Math.floor(first3 / 10) % 10 + Math.floor(first3 / 100);
+            let sumSecond3 = second3 % 10 + Math.floor(second3 / 10) % 10 + Math.floor(second3 / 100);
+            if (sumFirst3 === sumSecond3) {
+                alert("Поздравляем! У вас счастливый билет!");
+            }
+            else {
+                alert("Купите другой билет, посчастливей.");
+            }
+        }
+        else alert("Ошибка! Пожалуйста, введите шестизначное число.");
+
+
+
+    </script>
+</body>
+
+</html>
